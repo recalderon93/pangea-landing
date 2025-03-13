@@ -1,0 +1,68 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+CLEAR_LINE="\033[1K"
+
+TESTS_FAILED=false
+LINT_FAILED=false
+
+
+echo "\n Checking code with husky 🐺\n"
+# echo " --------------------------------------"
+echo ""
+
+env echo " ⏳ Lint check running...             "
+echo ""
+
+if ! npm run lint &> /dev/null; then
+	LINT_FAILED=true
+  # echo "${CLEAR_LINE}\r| ❌ ESLint found errors. Please fix the linting errors before committing."
+  echo "  ❌ ESLint found errors. Please fix the linting errors before committing."
+  # echo "-----------------------------------------------------------------------------------------"
+else
+	echo "  ✅ ESLint passed."
+	# echo "-----------------"
+fi
+
+echo ""
+echo ""
+# env echo -n "| ⏳ Tests check running...            |"
+env echo " ⏳ Tests check running...            "
+echo ""
+
+if npm test &> /dev/null
+then
+    # echo -e "${CLEAR_LINE}\r| ✅ Tests check passed!               |"
+    echo "  ✅ Tests check passed!               "
+else
+    # echo -e "${CLEAR_LINE}\r| ❌ Tests check failed (Oops❗️)       |"
+    echo "  ❌ Tests check failed (Oops❗️)       "
+    TESTS_FAILED=true
+fi
+
+echo ""
+echo ""
+echo ""
+
+if [ "$LINT_FAILED" = "true" ] || [ "$TYPESCRIPT_FAILED" = "true" ] || [ "$TESTS_FAILED" = "true" ]; then
+
+  echo "\033[0;31m🚨  Due to an error in one of the checks, git commit attempt was aborted\033[0m"
+  if [ "$LINT_FAILED" = "true" ]; then
+	  echo ""
+    echo "💡 For more information about lint errors, run 'npm run lint'"
+  fi
+  if [ "$TESTS_FAILED" = "true" ]; then
+	  echo ""
+    echo "💡 For more information about failing tests, run 'npm run test'"
+  fi
+  echo ""
+  exit 1
+else
+  echo "\033[0;32mGood job mate!\033[0m"
+	echo ""
+	echo ""
+  echo "Committing Code..."
+	echo ""
+	echo ""
+  exit 0
+fi
