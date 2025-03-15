@@ -3,6 +3,40 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* SHADES */
+  --shade-50: hsl(168, 8%, 92%);
+  --shade-100: hsl(168, 8%, 85%);
+  --shade-200: hsl(168, 8%, 70%);
+  --shade-300: hsl(168, 8%, 54%);
+  --shade-400: hsl(168, 8%, 44%);
+  --shade-500: hsl(168, 8%, 33%);
+  --shade-600: hsl(168, 8%, 22%);
+  /* TEAL */
+  --teal-50: hsl(171, 100%, 90%);
+  --teal-100: hsl(171, 100%, 72%);
+  --teal-200: hsl(171, 100%, 43%);
+  --teal-300: hsl(171, 100%, 34%);
+  --teal-400: hsl(171, 100%, 21%);
+  --teal-500: hsl(171, 100%, 16%);
+  --teal-600: hsl(171, 100%, 12%);
+  /* GREEN */
+  --green-50: hsl(133, 80%, 88%);
+  --green-100: hsl(133, 80%, 77%);
+  --green-200: hsl(133, 80%, 65%);
+  --green-300: hsl(133, 80%, 54%);
+  --green-400: hsl(133, 80%, 40%);
+  --green-500: hsl(133, 80%, 27%);
+  --green-600: hsl(133, 80%, 16%);
+  /* RED */
+  --red-50: hsl(0, 86%, 89%);
+  --red-100: hsl(0, 86%, 78%);
+  --red-200: hsl(0, 86%, 65%);
+  --red-300: hsl(0, 86%, 55%);
+  /* WHITE */
+  --white-50: hsl(0, 0%, 100%);
+  --white-100: hsl(0, 0%, 98%);
+  /* BLACK */
+  --black: hsl(0, 0%, 0%);
 }
 
 @theme inline {
@@ -10,17 +44,113 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-shade-50: var(--shade-50);
+  --color-shade-100: var(--shade-100);
+  --color-shade-200: var(--shade-200);
+  --color-shade-300: var(--shade-300);
+  --color-shade-400: var(--shade-400);
+  --color-shade-500: var(--shade-500);
+  --color-shade-600: var(--shade-600);
+  /* TEAL */
+  --color-teal-50: var(--teal-50);
+  --color-teal-100: var(--teal-100);
+  --color-teal-200: var(--teal-200);
+  --color-teal-300: var(--teal-300);
+  --color-teal-400: var(--teal-400);
+  --color-teal-500: var(--teal-500);
+  --color-teal-600: var(--teal-600);
+  /* GREEN */
+  --color-green-50: var(--green-50);
+  --color-green-100: var(--green-100);
+  --color-green-200: var(--green-200);
+  --color-green-300: var(--green-300);
+  --color-green-400: var(--green-400);
+  --color-green-500: var(--green-500);
+  --color-green-600: var(--green-600);
+  /* RED */
+  --color-red-50: var(--red-50);
+  --color-red-100: var(--red-100);
+  --color-red-200: var(--red-200);
+  --color-red-300: var(--red-300);
+  --color-white-50: var(--red-)
 }
 
-@media (prefers-color-scheme: dark) {
+/* Typography Styles */
+@layer components {
+  h1 {
+    @apply text-[40px] sm:text-[56px] leading-[52px] sm:leading-[72px] font-semibold;
+  }
+  h1.bold {
+    @apply font-bold;
+  }
+  h1.bolder {
+    @apply font-extrabold;
+  }
+  h2 {
+    @apply text-[36px] sm:text-[48px] leading-[48px] sm:leading-[64px] font-semibold;
+  }
+  h2.bold {
+    @apply font-bold;
+  }
+  h2.bolder {
+    @apply font-extrabold;
+  }
+  h3 {
+    @apply text-[28px] sm:text-[32px] leading-[36px] sm:leading-[44px] font-semibold;
+  }
+  h3.bold {
+    @apply font-bold;
+  }
+  h3.bolder {
+    @apply font-extrabold;
+  }
+  h4 {
+    @apply text-[20px] sm:text-[24px] leading-[28px] sm:leading-[32px] font-medium;
+  }
+  h4.bold {
+    @apply font-semibold;
+  }
+  h4.bolder {
+    @apply font-bold;
+  }
+  .paragraph-1 {
+    @apply text-[16px] sm:text-[20px] leading-[24px] sm:leading-[32px] font-normal;
+  }
+  .paragraph-1.bold {
+    @apply font-medium;
+  }
+  .paragraph-1.bolder {
+    @apply font-semibold;
+  }
+  .paragraph-2 {
+    @apply text-[12px] sm:text-[16px] leading-[20px] sm:leading-[24px] font-normal;
+  }
+  .paragraph-2.bold {
+    @apply font-medium;
+  }
+  .paragraph-2.bolder {
+    @apply font-semibold;
+  }
+  .caption-2 {
+    @apply text-[12px] sm:text-[16px] leading-[14px] sm:leading-[20px] font-medium;
+  }
+  .caption-2.bold {
+    @apply font-semibold;
+  }
+  .caption-2.bolder {
+    @apply font-bold;
+  }
+}
+
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
 }
