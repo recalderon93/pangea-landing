@@ -114,6 +114,42 @@
   h4.bolder {
     @apply font-bold;
   }
+  .h1 {
+    @apply text-[40px] sm:text-[56px] leading-[52px] sm:leading-[72px] font-semibold;
+  }
+  .h1.bold {
+    @apply font-bold;
+  }
+  .h1.bolder {
+    @apply font-extrabold;
+  }
+  .h2 {
+    @apply text-[36px] sm:text-[48px] leading-[48px] sm:leading-[64px] font-semibold;
+  }
+  .h2.bold {
+    @apply font-bold;
+  }
+  .h2.bolder {
+    @apply font-extrabold;
+  }
+  .h3 {
+    @apply text-[28px] sm:text-[32px] leading-[36px] sm:leading-[44px] font-semibold;
+  }
+  .h3.bold {
+    @apply font-bold;
+  }
+  .h3.bolder {
+    @apply font-extrabold;
+  }
+  .h4 {
+    @apply text-[20px] sm:text-[24px] leading-[28px] sm:leading-[32px] font-medium;
+  }
+  .h4.bold {
+    @apply font-semibold;
+  }
+  .h4.bolder {
+    @apply font-bold;
+  }
   .paragraph-1 {
     @apply text-[16px] sm:text-[20px] leading-[24px] sm:leading-[32px] font-normal;
   }
@@ -167,6 +203,94 @@
   }
   .elevation-5 {
     box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@layer utilities {
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-out {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes slide-down {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-up {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+
+  @keyframes slide-in-left {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slide-out-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes slide-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.2s ease-out forwards;
+  }
+
+  .animate-fade-out {
+    animation: fade-out 0.4s ease-in forwards;
+  }
+
+  .animate-slide-down {
+    animation: slide-down 0.3s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.2s ease-in forwards;
+  }
+
+  .animate-slide-in-left {
+    animation: slide-in-left 0.3s ease-out forwards;
+  }
+
+  .animate-slide-out-left {
+    animation: slide-out-left 0.3s ease-out forwards;
   }
 }
 
