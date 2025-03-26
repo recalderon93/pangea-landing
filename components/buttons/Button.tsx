@@ -22,6 +22,7 @@ export default function Button({
   title,
   onClick,
   variant = "brand",
+  className = "",
   ...props
 }: Props) {
   function handleOnKeyUp(e: KeyboardEvent<HTMLButtonElement>) {
@@ -34,7 +35,7 @@ export default function Button({
       onClick={onClick}
       onKeyUp={handleOnKeyUp}
       {...props}
-      className={cn(buttonVariants({ variant }))}>
+      className={cn([buttonVariants({ variant }), className])}>
       {title}
     </button>
   );
