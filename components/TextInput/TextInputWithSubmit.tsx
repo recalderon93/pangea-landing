@@ -17,7 +17,7 @@ export default function TextInputWithSubmit({
   ...props
 }: Props) {
   return (
-    <div className="lg: relative gap-4 lg:flex">
+    <div className="relative gap-4 lg:flex">
       <TextInputBase color={color} {...props} />
       <button
         className="absolute top-1/2 right-4 -translate-y-1/2 lg:hidden"

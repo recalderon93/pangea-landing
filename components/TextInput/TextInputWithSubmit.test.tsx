@@ -1,7 +1,7 @@
 import { fireEvent, render } from "@testing-library/react";
 import TextInputWithSubmit from "./TextInputWithSubmit";
 
-describe("Components/TextInputBase", () => {
+describe("Components/TextInputWithSubmit", () => {
   const buttonTitle = "GO";
   const onButtonClick = jest.fn();
   const inputTestId = "text field";
