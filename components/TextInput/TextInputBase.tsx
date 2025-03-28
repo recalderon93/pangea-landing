@@ -1,3 +1,4 @@
+"use client";
 import { cva } from "class-variance-authority";
 import { InputHTMLAttributes } from "react";
 import { cn } from "../../lib/classnameMerge";
@@ -24,7 +25,7 @@ const baseStyles = cva(
         brand:
           "border-teal-400 text-teal-400 placeholder-shade-300 outline-teal-600",
         accent:
-          "border-white-100 text-white-100 placeholder-shade-100 outline-shade-50",
+          "border-white-100 text-white-50 placeholder-shade-50 outline-shade-50",
       },
     },
   },

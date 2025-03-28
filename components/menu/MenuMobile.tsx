@@ -14,6 +14,8 @@ export default function MenuMobile({
   onClickCTA,
   isOpened = false,
 }: Props) {
+  if (!isOpened) return null;
+
   return (
     <MenuWrapperMobile
       isOpened={isOpened}

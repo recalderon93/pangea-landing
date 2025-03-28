@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
 import Header from "./Header";
 
 describe("Components/Header", () => {
@@ -27,14 +27,23 @@ describe("Components/Header", () => {
   });
 
   it("Should render the Mobile Navigation", async () => {
-    const { findByTestId } = render(<Header />);
+    const { findByTestId, findByLabelText } = render(<Header />);
+
+    // Simulate a click on the mobile menu button
+    const mobileMenuButton = await findByLabelText("burger-menu");
+    fireEvent.click(mobileMenuButton);
+
     const mobileNav = await findByTestId(testID.mobileNav);
 
     expect(mobileNav).toBeDefined();
   });
   it("Should render Mobile Navigation Routes", async () => {
-    const { findByTestId } = render(<Header />);
+    const { findByTestId, findByLabelText } = render(<Header />);
     const desktopNav = await findByTestId(testID.desktopNav);
+
+    // Simulate a click on the mobile menu button
+    const mobileMenuButton = await findByLabelText("burger-menu");
+    fireEvent.click(mobileMenuButton);
 
     expect(desktopNav).toHaveTextContent("Solutions");
     navigationRoutes.forEach((route) =>

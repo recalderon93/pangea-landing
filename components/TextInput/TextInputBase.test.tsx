@@ -14,7 +14,7 @@ describe("Component/TextInputBase", () => {
 
     const input = getByRole("textbox");
 
-    expect(input).toHaveClass("text-white-100");
+    expect(input).toHaveClass("text-white-50");
     expect(input).toHaveClass("border-white-100");
   });
 
