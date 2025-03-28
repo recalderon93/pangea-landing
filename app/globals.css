@@ -79,7 +79,7 @@
 /* Typography Styles */
 @layer components {
   h1 {
-    @apply text-[40px] sm:text-[56px] leading-[52px] sm:leading-[72px] font-semibold;
+    @apply text-[44px] sm:text-[64px] leading-[52px] sm:leading-[80px] font-semibold;
   }
   h1.bold {
     @apply font-bold;
@@ -88,7 +88,7 @@
     @apply font-extrabold;
   }
   h2 {
-    @apply text-[36px] sm:text-[48px] leading-[48px] sm:leading-[64px] font-semibold;
+    @apply text-[40px] sm:text-[56px] leading-[52px] sm:leading-[72px] font-semibold;
   }
   h2.bold {
     @apply font-bold;
@@ -97,7 +97,7 @@
     @apply font-extrabold;
   }
   h3 {
-    @apply text-[28px] sm:text-[32px] leading-[36px] sm:leading-[44px] font-semibold;
+    @apply text-[36px] sm:text-[48px] leading-[48px] sm:leading-[64px] font-semibold;
   }
   h3.bold {
     @apply font-bold;
@@ -106,16 +106,25 @@
     @apply font-extrabold;
   }
   h4 {
-    @apply text-[20px] sm:text-[24px] leading-[28px] sm:leading-[32px] font-medium;
+    @apply text-[28px] sm:text-[32px] leading-[36px] sm:leading-[44px] font-semibold;
   }
   h4.bold {
-    @apply font-semibold;
+    @apply font-bold;
   }
   h4.bolder {
+    @apply font-extrabold;
+  }
+  h5 {
+    @apply text-[20px] sm:text-[24px] leading-[28px] sm:leading-[32px] font-medium;
+  }
+  h5.bold {
+    @apply font-semibold;
+  }
+  h5.bolder {
     @apply font-bold;
   }
   .h1 {
-    @apply text-[40px] sm:text-[56px] leading-[52px] sm:leading-[72px] font-semibold;
+    @apply text-[48px] sm:text-[64px] leading-[56px] sm:leading-[80px] font-semibold;
   }
   .h1.bold {
     @apply font-bold;
@@ -124,7 +133,7 @@
     @apply font-extrabold;
   }
   .h2 {
-    @apply text-[36px] sm:text-[48px] leading-[48px] sm:leading-[64px] font-semibold;
+    @apply text-[40px] sm:text-[56px] leading-[52px] sm:leading-[72px] font-semibold;
   }
   .h2.bold {
     @apply font-bold;
@@ -133,7 +142,7 @@
     @apply font-extrabold;
   }
   .h3 {
-    @apply text-[28px] sm:text-[32px] leading-[36px] sm:leading-[44px] font-semibold;
+    @apply text-[36px] sm:text-[48px] leading-[48px] sm:leading-[64px] font-semibold;
   }
   .h3.bold {
     @apply font-bold;
@@ -142,12 +151,21 @@
     @apply font-extrabold;
   }
   .h4 {
-    @apply text-[20px] sm:text-[24px] leading-[28px] sm:leading-[32px] font-medium;
+    @apply text-[28px] sm:text-[32px] leading-[36px] sm:leading-[44px] font-semibold;
   }
   .h4.bold {
-    @apply font-semibold;
+    @apply font-bold;
   }
   .h4.bolder {
+    @apply font-extrabold;
+  }
+  .h5 {
+    @apply text-[20px] sm:text-[24px] leading-[28px] sm:leading-[32px] font-medium;
+  }
+  .h5.bold {
+    @apply font-semibold;
+  }
+  .h5.bolder {
     @apply font-bold;
   }
   .paragraph-1 {

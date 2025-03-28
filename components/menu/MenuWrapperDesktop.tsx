@@ -10,6 +10,8 @@ export default function MenuWrapperDesktop({
   onCloseMenu,
   children,
 }: Props) {
+  if (!isOpened) return null;
+
   return (
     <div
       className={`${isOpened ? "animate-fade-in" : "animate-fade-out"} fixed hidden h-screen w-screen overflow-clip backdrop-blur-xs sm:top-26 md:top-30 lg:block`}>
