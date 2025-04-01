@@ -43,7 +43,7 @@ export default function Button({
 
 /* tailwind */
 const buttonVariants = cva(
-  "rounded-full disabled:bg-shade-200 px-4 py-3 sm:px-6 sm:py-4 elevation-1 active:shadow-none heading-1 caption",
+  "rounded-full disabled:bg-shade-200 px-4 py-3 sm:px-6 sm:py-4 elevation-1 active:shadow-none heading-1 caption  shrink-0 grow-0",
   {
     variants: {
       variant: {
