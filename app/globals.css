@@ -186,6 +186,15 @@
   .paragraph-2.bolder {
     @apply font-semibold;
   }
+  .paragraph-3 {
+    @apply text-[10px] sm:text-[14px] leading-[16px] sm:leading-[20px] font-normal;
+  }
+  .paragraph-3.bold {
+    @apply font-medium;
+  }
+  .paragraph-3.bolder {
+    @apply font-semibold;
+  }
   .caption {
     @apply text-[12px] sm:text-[16px] leading-[14px] sm:leading-[20px] font-medium;
   }
