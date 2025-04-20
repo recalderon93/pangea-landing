@@ -11,7 +11,7 @@ export default function CheckIcon() {
         d="M5.62964 9.14822L8.44445 11.963L13.3704 7.03711"
         stroke="#FBFBFB"
         strokeWidth="1.5"
-        stroke-linecap="round"
+        strokeLinecap="round"
       />
     </svg>
   );
