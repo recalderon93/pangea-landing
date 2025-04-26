@@ -4,6 +4,7 @@ import UnlockPotentialBanner from "../components/banners/UnlockPotentialBanner";
 import { DrivenBySection } from "../components/DriveBy/DrivenBySection";
 import FAQSection from "../components/FAQ/FAQSection";
 import HeroSection from "../components/Hero/Hero";
+import ProjectsSection from "../components/Projects/ProjectsSection";
 import ServicesSection from "../components/Services/ServicesSection";
 import TestimonialsSections from "../components/Testimonials/TestimonialSection";
 
@@ -13,6 +14,7 @@ export default function Home() {
       <HeroSection />
       <ServicesSection />
       <DrivenBySection />
+      <ProjectsSection />
       <GreatSolutionsBanner />
       <KnowMoreBanner />
       <FAQSection />
