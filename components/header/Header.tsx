@@ -18,6 +18,10 @@ export default function Header() {
     setCurrentOption(null);
   }
 
+  function toggleMenu(option: string) {
+    setCurrentOption((prev) => (prev === option ? null : option));
+  }
+
   const navigationOptions = [
     { title: "Solutions" },
     { title: "Who We Are", href: "#" },
@@ -25,15 +29,14 @@ export default function Header() {
   ];
 
   return (
-    <div className="sticky top-0 z-50 w-full">
+    <div className="sticky top-0 z-50 h-full w-screen">
       <header className={cn(headerStyles({ isScrolled }))}>
         <div className="sm:w-46" onMouseEnter={onCloseMenu}>
           <PangeaLogo color={isScrolled ? "green" : "white"} />
         </div>
         <NavigationBar
           color={color}
-          onClickOption={setCurrentOption}
-          onHoverOption={setCurrentOption}
+          onClickOption={toggleMenu}
           options={navigationOptions}
           currentOption={currentOption}
         />
@@ -42,7 +45,7 @@ export default function Header() {
             isActive={currentOption === "Menu"}
             color={isScrolled ? "green" : "white"}
             className="lg:hidden"
-            onClick={() => setCurrentOption("Menu")}
+            onClick={() => toggleMenu("Menu")}
           />
           <Button
             className="hidden lg:block"

@@ -5,8 +5,6 @@ type Props = {
 export default function ArrowIcon({ className = "" }: Props) {
   return (
     <svg
-      width="15"
-      height="16"
       viewBox="0 0 15 16"
       fill="none"
       className={className}
