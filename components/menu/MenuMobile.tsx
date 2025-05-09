@@ -2,6 +2,9 @@ import { cva } from "class-variance-authority";
 import { cn } from "../../lib/classnameMerge";
 import MenuWrapperMobile from "./MenuWrapperMobile";
 import NavigationItem from "../Navigation/NavigationItem";
+import MenuNavbarMobile from "./MenuNavbarMobile";
+import MenuServicePreview from "./MenuServicePreview";
+import MenuServiceMobile from "./MenuServiceMobile";
 
 type Props = {
   isOpened?: boolean;
@@ -21,22 +24,8 @@ export default function MenuMobile({
       isOpened={isOpened}
       onCloseMenu={onCloseMenu}
       onClickCTA={onClickCTA}>
-      <nav data-testid="mobile-navigation">
-        <NavigationItem
-          title="Solutions"
-          className={cn(styles({ showBottomBorder: true }))}
-        />
-        <NavigationItem
-          title="Who We Are"
-          href="/"
-          className={cn(styles({ showBottomBorder: true }))}
-        />
-        <NavigationItem
-          title="Our Work"
-          href="/"
-          className={cn(styles({ showBottomBorder: true }))}
-        />
-      </nav>
+      {/* <MenuNavbarMobile /> */}
+      <MenuServiceMobile />
     </MenuWrapperMobile>
   );
 }
